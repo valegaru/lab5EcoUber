@@ -1,0 +1,105 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #f0f4f8;
+	color: #333;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+	font-size: 2rem;
+	margin: 20px 0;
+	color: #555;
+	text-align: center;
+}
+
+input[type='text'] {
+	display: block;
+	width: 100%;
+	max-width: 400px;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	font-size: 1rem;
+}
+
+button {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	padding: 10px;
+	margin: 20px auto;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+#rideInfo {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	max-width: 600px;
+	margin: 20px auto;
+}
+
+#rideInfo span {
+	font-weight: bold;
+}
+
+p {
+	margin: 10px 0;
+	line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+	body {
+		padding: 10px;
+	}
+
+	h1,
+	h2 {
+		font-size: 2rem;
+	}
+
+	input[type='text'],
+	button,
+	#rideInfo {
+		max-width: 90%;
+	}
+}

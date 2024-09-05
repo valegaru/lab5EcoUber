@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Viaje en Progreso</title>
+	</head>
+	<body>
+		<h1>Detalles del Viaje</h1>
+		<p id="rideInfo">
+			Conductor: <span id="driverName"></span><br />
+			Origen: <span id="origin"></span><br />
+			Destino: <span id="destination"></span><br />
+			Estado: <span id="statusInfo"></span>
+		</p>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const rideData = JSON.parse(localStorage.getItem('rideInProgress'));
+
+				if (rideData) {
+					document.getElementById('driverName').textContent = rideData.driverName;
+					document.getElementById('origin').textContent = rideData.origin;
+					document.getElementById('destination').textContent = rideData.destination;
+					document.getElementById('statusInfo').textContent = rideData.status;
+				} else {
+					document.getElementById('rideInfo').textContent = 'No hay viaje en progreso.';
+				}
+			});
+		</script>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+		<script src="indexclient.js"></script>
+	</body>
+</html>
